@@ -2,6 +2,7 @@ package com.yuyan.harp.data.model
 
 import java.util.HashMap
 import com.google.gson.GsonBuilder
+import com.yuyan.harp.data.driver.ResultState
 
 class ResultDataSource {
     data class BaseResult(var code: String, var msg: String)
@@ -52,10 +53,10 @@ class ResultDataSource {
 
     companion object {
         fun create(code: String): ResultDataSource {
-            return ResultDataSource(code, "ResultState.get(code)")
+            return ResultDataSource(code, ResultState[code])
         }
         fun create(code: Int): ResultDataSource {
-            return ResultDataSource("$code", "ResultState.get(code)")
+            return ResultDataSource("$code", ResultState["$code"])
         }
 
         fun success(): ResultDataSource {

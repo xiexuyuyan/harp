@@ -22,4 +22,7 @@ interface UserDao {
 
     @Update(entity = User::class)
     fun update(user: User)
+
+    @Insert(entity = Login::class)
+    fun login(login: Login)
 }

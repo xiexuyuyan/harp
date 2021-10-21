@@ -8,6 +8,10 @@
             <parameter name="name" type="string"/>
             <parameter name="mail" type="string"/>
         </action>
+        <!-- login by @uid -->
+        <action url="login.jsp" name="login">
+            <parameter name="uid" type="int"/>
+        </action>
     </controller>
 
 </manifest>

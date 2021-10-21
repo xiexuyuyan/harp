@@ -7,9 +7,15 @@ import org.yuyan.room.entity.Entity
 @Entity(tableName = "users")
 data class User(
     @PrimaryKey
-    @ColumnInfo(name = "uid") var uid: Int
-    , @ColumnInfo(name = "user_name") var name: String
-    , @ColumnInfo(name = "user_mail") var mail: String) {
+    @ColumnInfo(name = "uid")
+    var uid: Int,
+
+    @ColumnInfo(name = "user_name")
+    var name: String,
+
+    @ColumnInfo(name = "user_mail")
+    var mail: String
+    ) {
 
     override fun toString(): String {
         return ("uid: " + uid
