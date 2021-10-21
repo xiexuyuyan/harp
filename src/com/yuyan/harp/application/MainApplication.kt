@@ -1,6 +1,7 @@
 package com.yuyan.harp.application
 
 import com.yuyan.harp.data.driver.ResultState
+import com.yuyan.harp.room.UserDatabaseHelper
 import droid.app.Application
 import droid.server.pm.InstallManager
 import droid.server.pm.PackageManager
@@ -8,8 +9,10 @@ import droid.server.pm.PackageManager
 class MainApplication: Application() {
     override fun onCreate() {
         super.onCreate()
-        println("MainApplication onCreate in kotlin")
+        println("MainApplication onCreate in child")
         initResultDataRepository()
+
+        UserDatabaseHelper.init()
     }
 
     private fun initResultDataRepository() {

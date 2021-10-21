@@ -3,4 +3,5 @@
 /build/
 /web/.htaccess
 /web/nginx.htaccess
+/web/phpMyAdmin4.8.5/
 /out/
