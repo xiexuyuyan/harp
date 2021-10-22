@@ -17,5 +17,5 @@ interface WebSessionDao {
     fun getSessionByUid(uid: Int): WebSession
 
     @Query(statement = "select * from web_session where session_key like :sessionKey limit 1")
-    fun getSessionBySessionKey(sessionKey: Int): WebSession
+    fun getSessionBySessionKey(sessionKey: String): WebSession
 }

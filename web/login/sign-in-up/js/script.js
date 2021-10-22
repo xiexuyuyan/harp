@@ -10,13 +10,13 @@ function checkIfLogin(name, mail){
     data: jsonData,
     success: function (result) {
       window.parent.$('.sign-in-up-iframe').remove();
-      console.log(result);
+      console.log("js success: result[" + result + "]");
     },
     error: function() {
-      console.log("error");
+      console.log("js error: " + "error");
     },
     complete: function() {
-      console.log('login action complete!');
+      console.log("js complete: " + 'login action complete!');
     }
   });
 }

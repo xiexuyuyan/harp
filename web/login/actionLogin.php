@@ -6,6 +6,7 @@
     curl_setopt($curl, CURLOPT_URL, 'http://localhost:6699/com.yuyan.harp/login.jsp');
     // 3. 将json data转置为curl post请求的参数列表
     $reString = "";
+    // echo "php receive: [".$jsonString."]\n";
     $jsonObject = json_decode($jsonString, true);
     foreach($jsonObject as $k => $v) {
         $reString .= $k.'='.$v."&";
@@ -21,7 +22,9 @@
     $responseHeaderSize = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
     $responseHeader = substr($result, 0, $responseHeaderSize);
     // 7. 从header中通过正则过滤需要的键值
-    preg_match('/(?<=session_key: )\d{4}/', $responseHeader, $sessionKeyMatches);
+    $matchSessionKeyPat = '/(?<=session_key: )[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}/';
+    preg_match($matchSessionKeyPat, $responseHeader, $sessionKeyMatches);
+    // echo "match sessionKeyMatches: [".$sessionKeyMatches[0]."]\n";
     $sessionKey = $sessionKeyMatches[0];
     if (is_null($sessionKey)) {
 

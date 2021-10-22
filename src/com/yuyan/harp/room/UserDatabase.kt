@@ -8,4 +8,6 @@ import org.yuyan.room.database.Database
 abstract class UserDatabase: RoomDatabase(){
     @DaoMethod
     abstract fun userDao(): UserDao
+    @DaoMethod
+    abstract fun webSessionDao(): WebSessionDao
 }

@@ -29,12 +29,22 @@ dependencies {
 
     // https://mvnrepository.com/artifact/com.squareup/javapoet
     implementation group: 'com.squareup', name: 'javapoet', version: '1.11.1'
+
+    // https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.9.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
 sourceSets {
     main {
         java['srcDirs'] = ['src']
         resources['srcDirs'] = ['res']
+    }
+    test {
+        java['srcDirs'] = ['test/src']
+        resources['srcDirs'] = ['test/res']
     }
 }
 
