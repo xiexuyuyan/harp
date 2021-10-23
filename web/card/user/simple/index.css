@@ -1,0 +1,14 @@
+:root {
+    --size-card-simple-text-name: 32px;
+    --size-card-simple-text-uid: 18px;
+    --size-card-simple-text-mail: 20px;
+
+    --size-card-simple-height: 100px;
+    --size-card-simple-width: 150px;
+
+    --size-card-simple-radius: 15px;
+
+    --color-card-simple-user-bg: rgb(230,255,253);
+    --color-card-user-message: rgb(152,180,179);
+    --color-card-user-message-dark: rgb(70, 81, 70);
+}

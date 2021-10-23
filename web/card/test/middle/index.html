@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    @import 'index.css';
+    body{
+      margin: 0px;
+    }
+    .simple-user-body {
+      height: var(--size-card-simple-height);
+      width: var(--size-card-simple-width);
+
+      background: var(--color-card-simple-user-bg);
+      border-radius: var(--size-card-simple-radius);
+    }
+    .simple-user-body a {
+      text-decoration:none;
+    }
+    .simple-user-body a:link {
+      color: var(--color-card-title-001);
+    }
+    .simple-user-body a:visited {
+      color: var(--color-card-title-001);
+    }
+    .simple-user-body p {
+      margin: 0px;
+      text-align: center;
+    }
+    .simple-user-name {
+      font-size: var(--size-card-simple-text-name);
+      color: var(--color-card-user-message-dark);
+    }
+    .simple-user-uid {
+      font-size: var(--size-card-simple-text-uid);
+      color: var(--color-card-user-message);
+    }
+    .simple-user-mail {
+      font-size: var(--size-card-simple-text-mail);
+      color: var(--color-card-user-message);
+    }
+  </style>
+</head>
+<body>
+  <div class="simple-user-body">
+    <p class="simple-user-name"><a href="#">tom</a></p>
+    <p class="simple-user-uid"><a href="#">1</a></p>
+    <p class="simple-user-mail"><a href="#">tom@ktc.com</a></p>
+  </div>
+</body>
+</html>
